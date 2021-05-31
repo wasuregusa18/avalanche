@@ -25,7 +25,7 @@ class Player:
 
     def check_in_hand(self, card: Card) -> bool:
         if card not in self.hand:
-            raise RuleError(f"Player {id+1} does not hold {card}")
+            raise RuleError(f"Player {self.id+1} does not hold {card}")
 
     def take_pile(self, cards: List[Card]):
         self.deck.extend(cards)

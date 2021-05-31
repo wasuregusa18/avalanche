@@ -5,7 +5,7 @@ from Deck import Deck
 from Pile import Pile
 from Player import Player
 
-
+# WRITE TESTS NEXT
 class Game:
     def __init__(self, num_piles=3, hand_size=7, shuffle=False):
         deck = Deck()
@@ -47,6 +47,7 @@ class Game:
                 raise RuleError(f"Must first play on empty pile")
             if pile_num == -1:
                 current_player.discard(card)
+                self.discard_pile.append(card)
             else:
                 target_pile = self.board[pile_num]
                 current_player.play(card, target_pile)

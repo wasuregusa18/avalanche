@@ -48,7 +48,7 @@ class Pile:
             return True
         # same suit
         if top_card.suit == card.suit:
-            raise RuleError("{card} played same suit as {top_card}")
+            raise RuleError(f"{card} played same suit as {top_card}")
         # too large - count should always be the smaller
         if new_sum := card.val + self.count > 21:
             raise RuleError(
